@@ -1,34 +1,31 @@
-import  mongoose from "mongoose";
+import mongoose from "mongoose";
 
+const orderItemSchema = new mongoose.Schema({
+  productId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Product",
+    required: true,
+  },
+  quantity: {
+    type: Number,
+    required: true,
+  },
+});
 
-const OrderItemsSchema = new mongoose.Schema({
-    productId:{
-        type: mongoose.Schema.Type.ObjectID,
-        ref: "Product"
-    },
-    qauntity:{
-        type: Number,
-        required: true,
-    },
-})
+const orderSchema = new mongoose.Schema({
+  totalAmount: {
+    type: Number,
+    required: true,
+  },
+  customer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  shippingAddress: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  orderItems: [orderItemSchema],
+}, { timestamps: true });
 
-const OrderSchema = new mongoose.Schema({
-    TotalAmount:{
-        type: Number,
-        required:true
-    },
-    cuntomer:{
-        type: mongoose.Schema.Type.ObjectID,
-        ref: "User"
-    },
-    Useraddress:{
-        type: mongoose.Schema.Type.ObjectID,
-        ref: "User"
-    },
-    OrderItems:{
-        type: [OrderItemsSchema]
-    }
-
-}, {timestamps: true});
-
-export const Order = mongoose.models("Order", OrderSchema);
+export const Order = mongoose.models.Order || mongoose.model("Order", orderSchema);

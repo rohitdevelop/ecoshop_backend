@@ -1,10 +1,11 @@
-import  mongoose from "mongoose";
+import mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema({
-    name:{
-        type: String,
-        required:true
-    },
-}, {timestamps: true});
+const categorySchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+}, { timestamps: true });
 
-export const Category = mongoose.models("Category", UserSchema);
+export const Category = mongoose.models.Category || mongoose.model("Category", categorySchema);

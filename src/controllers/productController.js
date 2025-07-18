@@ -4,7 +4,7 @@ import { Product } from "../models/product.models.js";
 export const createProduct = async (req, res) => {
   try {
     const product = await Product.create(req.body);
-    res.status(201).json({ success: true, data: product });
+    res.status(200).json({ success: true, data: product });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

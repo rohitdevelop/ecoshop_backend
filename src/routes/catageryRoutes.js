@@ -1,12 +1,12 @@
-// import express from "express";
-// import {
-//   createCategory,
-//   getAllCategories,
-// } from "../controllers/cotegoryController.js";
+import express from "express";
+import {
+  createCategory,
+  getAllCategories,
+} from "../controllers/cotegoryController.js";
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.post("/", createCategory);
-// router.get("/", getAllCategories);
+router.post("/", createCategory);
+router.get("/", getAllCategories);
 
-// export default router;
+export default router;

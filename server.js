@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from "dotenv";
-import connectDB from "./src/detabase/db.js"
+// import connectDB from "./src/detabase/db.js"
 import productRoutes from "./src/routes/productRoutes.js";
 import categoryRoutes from "./src/routes/catageryRoutes.js";
 import cors from "cors"
@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-connectDB();
+// connectDB();
 
 // API routes
 app.use("/api/products", productRoutes);

@@ -1,18 +1,20 @@
 import express from 'express';
 import dotenv from "dotenv";
-// import connectDB from "./src/detabase/db.js"
+import connectDB from "./src/detabase/db.js"; // ✅ Make sure folder is "database"
 import productRoutes from "./src/routes/productRoutes.js";
 import categoryRoutes from "./src/routes/catageryRoutes.js";
-import cors from "cors"
+import cors from "cors";
+
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 4000;
+
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
-// connectDB();
+// ✅ Connect to MongoDB
+connectDB();
 
 // API routes
 app.use("/api/products", productRoutes);

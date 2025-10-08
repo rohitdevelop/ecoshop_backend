@@ -1,0 +1,106 @@
+
+const homeKitchenProducts = [
+  {
+    id: 1,
+    name: "Bamboo Cutting Board Set",
+    slug: "bamboo-cutting-board-set",
+    description: "Sustainable bamboo cutting boards in 3 sizes. Naturally antimicrobial and biodegradable.",
+    price: 34.99,
+    compareAtPrice: 49.99,
+    category: "Home & Kitchen",
+    subcategory: "Kitchen Tools",
+    brand: "EcoChef",
+    sku: "HK-001",
+    stock: 85,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1594991436397-c54f2f866e05",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace"
+    ],
+    ecoFeatures: ["Biodegradable", "Sustainable bamboo", "Chemical-free"],
+    rating: 4.7,
+    reviews: 142,
+    tags: ["bamboo", "cutting board", "kitchen", "sustainable"],
+    specifications: {
+      material: "100% Organic Bamboo",
+      sizes: "Small, Medium, Large",
+      finish: "Food-safe mineral oil",
+      care: "Hand wash only"
+    },
+    featured: true,
+    createdAt: "2024-01-15T10:30:00Z",
+    updatedAt: "2024-09-20T14:22:00Z"
+  },
+]
+
+
+// Gifts Products (8 items)
+const giftsProducts = [
+  {
+    id: 9,
+    name: "Seed Paper Greeting Cards",
+    slug: "seed-paper-greeting-cards",
+    description: "Plantable greeting cards embedded with wildflower seeds. Set of 10 assorted designs.",
+    price: 24.99,
+    compareAtPrice: 32.99,
+    category: "Gifts",
+    subcategory: "Cards & Stationery",
+    brand: "GrowCards",
+    sku: "GF-001",
+    stock: 140,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1606762285367-457d57e04827",
+      "https://images.unsplash.com/photo-1583144582614-e5c7e48d4b23"
+    ],
+    ecoFeatures: ["Plantable", "Biodegradable", "Recycled paper", "Chemical-free"],
+    rating: 4.9,
+    reviews: 267,
+    tags: ["greeting cards", "seed paper", "plantable", "gifts"],
+    specifications: {
+      material: "Recycled paper with wildflower seeds",
+      quantity: "10 cards + envelopes",
+      flowers: "Mixed wildflowers",
+      size: "5 x 7 inches"
+    },
+    featured: true,
+    createdAt: "2024-03-01T10:20:00Z",
+    updatedAt: "2024-09-19T14:40:00Z"
+  },
+]
+
+
+// Personal & Body Care Products (8 items)
+const personalBodyCareProducts = [
+  {
+    id: 17,
+    name: "Organic Bamboo Toothbrush Set",
+    slug: "organic-bamboo-toothbrush-set",
+    description: "Pack of 4 biodegradable bamboo toothbrushes with BPA-free bristles.",
+    price: 14.99,
+    compareAtPrice: 19.99,
+    category: "Personal & Body Care",
+    subcategory: "Oral Care",
+    brand: "BamboSmile",
+    sku: "PC-001",
+    stock: 220,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04",
+      "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea"
+    ],
+    ecoFeatures: ["Biodegradable", "Plastic-free", "Vegan", "Compostable handle"],
+    rating: 4.7,
+    reviews: 489,
+    tags: ["toothbrush", "bamboo", "oral care", "zero waste"],
+    specifications: {
+      material: "Bamboo handle, nylon bristles",
+      quantity: "4 toothbrushes",
+      bristles: "Soft, BPA-free",
+      packaging: "Recyclable cardboard"
+    },
+    featured: true,
+    createdAt: "2024-01-22T09:30:00Z",
+    updatedAt: "2024-09-23T13:25:00Z"
+  },
+]

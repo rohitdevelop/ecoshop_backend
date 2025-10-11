@@ -506,8 +506,8 @@ const giftsProducts = [
 const personalBodyCareProducts = [
   {
     id: 17,
-    name: "Organic Bamboo Toothbrush Set",
-    slug: "organic-bamboo-toothbrush-set",
+    name: "Organic Bamboo Toothbrush ",
+    slug: "organic-bamboo-toothbrush",
     description: "Pack of 4 biodegradable bamboo toothbrushes with BPA-free bristles.",
     price: 14.99,
     compareAtPrice: 19.99,
@@ -599,8 +599,8 @@ const personalBodyCareProducts = [
   },
   {
     id: 20,
-    name: "Reusable Makeup Remover Pads",
-    slug: "reusable-makeup-remover-pads",
+    name: "Reusable Makeup Remover ",
+    slug: "reusable-makeup-remover",
     description: "Soft organic cotton rounds for makeup removal. Machine washable. Set of 16.",
     price: 18.99,
     compareAtPrice: 24.99,

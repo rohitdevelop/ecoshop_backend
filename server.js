@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from "dotenv";
 // import connectDB from "./src/detabase/db.js"; // ✅ Make sure folder is "database"
 import productRoutes from "./src/routes/productRoutes.js";
-import categoryRoutes from "./src/routes/catageryRoutes.js";
+import catageryRoutes from "./src/routes/catageryRoutes.js";
 import cors from "cors";
 // ........................................................................................................
 import dummyProducts from './src/DumyDeta/products.js';
@@ -23,7 +23,7 @@ app.use(express.json());
 
 // ✅ API routes
 app.use("/api/products", productRoutes);
-app.use("/api/categories", categoryRoutes);
+app.use("/api/categories", catageryRoutes);
 
 //  .........................................................................................................................
 const dumyproducts = [
@@ -59,6 +59,52 @@ app.get('/dumyproducts/category/:category', (req, res) => {
 app.get('/dumycategories', (req, res) => {
   res.json({ success: true, data: dumycategories, count: dumycategories.length });
 });
+
+// ✅ Home & Kitchen Products (4 items)
+app.get('/homeKitchenProducts', (req, res) => {
+  try {
+    const products = dumyproducts
+      .filter(p => p.category.toLowerCase() === "home & kitchen".toLowerCase())
+      .slice(0, 4);
+
+    res.json({ success: true, data: products, count: products.length });
+  } catch (error) {
+    console.error("Error fetching home kitchen products:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+
+// ✅ Personal & Body Care Products (4 items)
+app.get('/personalBodyCareProducts', (req, res) => {
+  try {
+    const products = dumyproducts
+      .filter(p => p.category.toLowerCase() === "personal & body care".toLowerCase())
+      .slice(0, 4);
+
+    res.json({ success: true, data: products, count: products.length });
+  } catch (error) {
+    console.error("Error fetching personal body care products:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+
+// ✅ Gifts Products (4 items)
+app.get('/giftsProducts', (req, res) => {
+  try {
+    const products = dumyproducts
+      .filter(p => p.category.toLowerCase() === "gifts".toLowerCase())
+      .slice(0, 4);
+
+    res.json({ success: true, data: products, count: products.length });
+  } catch (error) {
+    console.error("Error fetching gifts products:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+
 
 // .........................................................................................................................................
 

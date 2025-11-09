@@ -549,7 +549,8 @@ const personalBodyCareProducts = [
     stock: 175,
     inStock: true,
     images: [
-       "https://images.unsplash.com/photo-1620916566398-39f1143ab7be"
+      "https://images.unsplash.com/photo-1585559604959-c0c0f1e6cf9d",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be"
     ],
     ecoFeatures: ["Aluminum-free", "Natural ingredients", "Cruelty-free", "Plastic-free packaging"],
     rating: 4.6,
